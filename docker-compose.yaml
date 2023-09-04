@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  backend:
+    build: .
+    ports:
+      - "80:80"
+    environment:
+       "ASPNETCORE_ENVIRONMENT": "Development"
+    depends_on:
+      - db
+    restart: "on-failure"
+  db:
+    image: "postgres:alpine"
+    ports:
+      - "5432:5432"
+    volumes:
+      - data:/var/lib/postgresql
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "password"
+
+volumes:
+  data:
+  

@@ -1,4 +1,4 @@
-# UnitOfWokrProject
+# UnitOfWorkProject
 
 UnitOfWorkProject is a small CRUD api in order to practice and demonstrate UnitOfWork pattern.
 It is created for learning purposes and it is open to any comments and recomendations.
